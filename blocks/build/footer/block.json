@@ -1,0 +1,69 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "elegant/footer",
+  "version": "1.0",
+  "title": "Footer",
+  "category": "elegant-blocks",
+  "icon": "ellipsis",
+  "description": "Displays footer",
+  "example": {},
+  "attributes": {
+    "footerText": {
+      "type": "string",
+      "default": "Made with &#10084; by --- <strong><i>Al Mahmud Alif</i></strong>"
+    },
+    "linkColor": {
+      "type": "string",
+      "default": "#F7F7F7"
+    },
+    "linkColorHover": {
+      "type": "string",
+      "default": "#F48840"
+    },
+    "separatorColor": {
+      "type": "string",
+      "default": "#FFFFFF"
+    },
+    "footerTextColor": {
+      "type": "string",
+      "default": "#FFFFFF"
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#1E1E1E"
+    },
+    "fontSize": {
+      "type": "number",
+      "default": 16
+    },
+    "footerFontSize": {
+      "type": "number",
+      "default": 16
+    },
+    "fontWeight": {
+      "type": "string",
+      "default": "400"
+    },
+    "footerFontWeight": {
+      "type": "string",
+      "default": "400"
+    },
+    "gap": {
+      "type": "number",
+      "default": 25
+    },
+    "padding": {
+      "type": "number",
+      "default": 60
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "elegance",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "elegant/recent-posts",
+  "version": "1.0",
+  "title": "Recent posts",
+  "category": "elegant-blocks",
+  "icon": "list-view",
+  "description": "Shows recent posts",
+  "example": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Recent posts"
+    },
+    "headingColor": {
+      "type": "string",
+      "default": "#1E1E1E"
+    },
+    "headingAlignment": {
+      "type": "string",
+      "default": "left"
+    },
+    "headingFontSize": {
+      "type": "number",
+      "default": 20
+    },
+    "timeFontSize": {
+      "type": "number",
+      "default": 12
+    },
+    "titleFontSize": {
+      "type": "number",
+      "default": 20
+    },
+    "postCount": {
+      "type": "number",
+      "default": 5
+    },
+    "linkColor": {
+      "type": "string",
+      "default": "#1E1E1E"
+    },
+    "linkColorHover": {
+      "type": "string",
+      "default": "#F48840"
+    },
+    "dateColor": {
+      "type": "string",
+      "default": "#AAAAAA"
+    },
+    "gap": {
+      "type": "number",
+      "default": 15
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "elegance",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

@@ -1,0 +1,57 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "elegant/menu",
+  "version": "1.0",
+  "title": "Menu",
+  "category": "elegant-blocks",
+  "icon": "menu",
+  "description": "Displays menu items",
+  "example": {},
+  "attributes": {
+    "imgID": {
+      "type": "number",
+      "default": 0
+    },
+    "bgColor": {
+      "type": "string",
+      "default": "#F7F7F7"
+    },
+    "linkColor": {
+      "type": "string",
+      "default": "#1E1E1E"
+    },
+    "linkHoverColor": {
+      "type": "string",
+      "default": "#F48840"
+    },
+    "siteTitleColor": {
+      "type": "string",
+      "default": "#F48840"
+    },
+    "siteTitleHoverColor": {
+      "type": "string",
+      "default": "#1E1E1E"
+    },
+    "fontWeight": {
+      "type": "string",
+      "default": "700"
+    },
+    "linkActiveColor": {
+      "type": "string",
+      "default": "#F48840"
+    },
+    "linkFontSize": {
+      "type": "number",
+      "default": 16
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "elegance",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}
