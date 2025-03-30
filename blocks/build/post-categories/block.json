@@ -1,0 +1,65 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "elegant/post-categories",
+  "version": "1.0",
+  "title": "Post categories",
+  "category": "elegant-blocks",
+  "icon": "text-page",
+  "description": "Shows post categories",
+  "example": {},
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Categories"
+    },
+    "headingColor": {
+      "type": "string",
+      "default": "#1E1E1E"
+    },
+    "gap": {
+      "type": "number",
+      "default": 15
+    },
+    "categoryColor": {
+      "type": "string",
+      "default": "#1E1E1E"
+    },
+    "categoryHoverColor": {
+      "type": "string",
+      "default": "#F48840"
+    },
+    "categoryFontSize": {
+      "type": "number",
+      "default": 16
+    },
+    "fontWeight": {
+      "type": "string",
+      "default": "400"
+    },
+    "categoryGap": {
+      "type": "number",
+      "default": 10
+    },
+    "headingAlignment": {
+      "type": "string",
+      "default": "left"
+    },
+    "categoryCount": {
+      "type": "number",
+      "default": 5
+    },
+    "headingSize": {
+      "type": "number",
+      "default": 25
+    }
+  },
+  "supports": {
+    "html": false
+  },
+  "textdomain": "elegance",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "render": "file:./render.php"
+}

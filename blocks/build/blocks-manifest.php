@@ -131,6 +131,73 @@ return array(
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
 	),
+	'post-categories' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 2,
+		'name' => 'elegant/post-categories',
+		'version' => '1.0',
+		'title' => 'Post categories',
+		'category' => 'elegant-blocks',
+		'icon' => 'text-page',
+		'description' => 'Shows post categories',
+		'example' => array(
+			
+		),
+		'attributes' => array(
+			'heading' => array(
+				'type' => 'string',
+				'default' => 'Categories'
+			),
+			'headingColor' => array(
+				'type' => 'string',
+				'default' => '#1E1E1E'
+			),
+			'gap' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'categoryColor' => array(
+				'type' => 'string',
+				'default' => '#1E1E1E'
+			),
+			'categoryHoverColor' => array(
+				'type' => 'string',
+				'default' => '#F48840'
+			),
+			'categoryFontSize' => array(
+				'type' => 'number',
+				'default' => 16
+			),
+			'fontWeight' => array(
+				'type' => 'string',
+				'default' => '400'
+			),
+			'categoryGap' => array(
+				'type' => 'number',
+				'default' => 10
+			),
+			'headingAlignment' => array(
+				'type' => 'string',
+				'default' => 'left'
+			),
+			'categoryCount' => array(
+				'type' => 'number',
+				'default' => 5
+			),
+			'headingSize' => array(
+				'type' => 'number',
+				'default' => 25
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'elegance',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
 	'recent-posts' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 2,

@@ -55,12 +55,6 @@ export default function Edit({ attributes, setAttributes }) {
 		},
 	);
 
-	const fontWeightOptions = [
-		{ label: "Light", value: "300" },
-		{ label: "Regular", value: "400" },
-		{ label: "Bold", value: "700" },
-	];
-
 	return (
 		<div {...blockProps}>
 			<div {...innerBlockProps} />
@@ -150,7 +144,11 @@ export default function Edit({ attributes, setAttributes }) {
 					<SelectControl
 						label={__("Font Weight", metadata.textdomain)}
 						value={attributes.fontWeight}
-						options={fontWeightOptions}
+						options={[
+							{ label: "Light", value: "300" },
+							{ label: "Regular", value: "400" },
+							{ label: "Bold", value: "700" },
+						]}
 						onChange={(value) => {
 							setAttributes({ fontWeight: value });
 						}}
@@ -170,7 +168,11 @@ export default function Edit({ attributes, setAttributes }) {
 					<SelectControl
 						label={__("Font Weight", metadata.textdomain)}
 						value={attributes.footerFontWeight}
-						options={fontWeightOptions}
+						options={[
+							{ label: "Light", value: "300" },
+							{ label: "Regular", value: "400" },
+							{ label: "Bold", value: "700" },
+						]}
 						onChange={(value) => {
 							setAttributes({ footerFontWeight: value });
 						}}
