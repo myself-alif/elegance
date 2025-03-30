@@ -1,0 +1,31 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-elegant-post-tags {
+	display: flex;
+	flex-direction: column;
+	.sidebar-heading {
+		h2 {
+			text-transform: uppercase;
+		}
+	}
+	.content {
+		ul {
+			li {
+				display: inline-block;
+				margin: 6px;
+				a {
+					display: inline-block;
+					transition: color 0.3s ease;
+					padding: 5px 20px;
+					border: 1px solid #eee;
+					text-transform: capitalize;
+				}
+				transition: background-color 0.3s ease;
+			}
+		}
+	}
+}

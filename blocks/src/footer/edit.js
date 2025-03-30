@@ -69,6 +69,7 @@ export default function Edit({ attributes, setAttributes }) {
 					title={__("Link color", metadata.textdomain)}
 				>
 					<PanelColorSettings
+						enableAlpha={true}
 						colorSettings={[
 							{
 								value: attributes.linkColor,
@@ -90,6 +91,7 @@ export default function Edit({ attributes, setAttributes }) {
 					title={__("Separator color", metadata.textdomain)}
 				>
 					<PanelColorSettings
+						enableAlpha={true}
 						colorSettings={[
 							{
 								value: attributes.separatorColor,
@@ -105,6 +107,7 @@ export default function Edit({ attributes, setAttributes }) {
 					title={__("Footer text color", metadata.textdomain)}
 				>
 					<PanelColorSettings
+						enableAlpha={true}
 						colorSettings={[
 							{
 								value: attributes.footerTextColor,
@@ -120,6 +123,7 @@ export default function Edit({ attributes, setAttributes }) {
 					title={__("Background color", metadata.textdomain)}
 				>
 					<PanelColorSettings
+						enableAlpha={true}
 						colorSettings={[
 							{
 								value: attributes.bgColor,

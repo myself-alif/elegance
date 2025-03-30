@@ -1,0 +1,69 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "elegant/post-tags",
+	"version": "1.0",
+	"title": "Post tags",
+	"category": "elegant-blocks",
+	"icon": "screenoptions",
+	"description": "Shows post tags",
+	"example": {},
+	"attributes": {
+		"heading": {
+			"type": "string",
+			"default": "Tag clouds"
+		},
+		"headingColor": {
+			"type": "string",
+			"default": "#1E1E1E"
+		},
+		"headingSize": {
+			"type": "number",
+			"default": 20
+		},
+		"headingAlignment": {
+			"type": "string",
+			"default": "left"
+		},
+		"tagCount": {
+			"type": "number",
+			"default": 5
+		},
+		"tagNormalColor": {
+			"type": "string",
+			"default": "#1E1E1E"
+		},
+		"tagHoverColor": {
+			"type": "string",
+			"default": "#F7F7F7"
+		},
+		"gap": {
+			"type": "number",
+			"default": 15
+		},
+		"tagFontWeight": {
+			"type": "string",
+			"default": "400"
+		},
+		"linkBgColor": {
+			"type": "string",
+			"default": "#FFFFFF"
+		},
+		"linkBgHoverColor": {
+			"type": "string",
+			"default": "#f58840"
+		},
+		"borderColor": {
+			"type": "string",
+			"default": "#EEEEEE"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "elegance",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

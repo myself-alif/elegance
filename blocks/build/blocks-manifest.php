@@ -198,6 +198,77 @@ return array(
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
 	),
+	'post-tags' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 2,
+		'name' => 'elegant/post-tags',
+		'version' => '1.0',
+		'title' => 'Post tags',
+		'category' => 'elegant-blocks',
+		'icon' => 'screenoptions',
+		'description' => 'Shows post tags',
+		'example' => array(
+			
+		),
+		'attributes' => array(
+			'heading' => array(
+				'type' => 'string',
+				'default' => 'Tag clouds'
+			),
+			'headingColor' => array(
+				'type' => 'string',
+				'default' => '#1E1E1E'
+			),
+			'headingSize' => array(
+				'type' => 'number',
+				'default' => 20
+			),
+			'headingAlignment' => array(
+				'type' => 'string',
+				'default' => 'left'
+			),
+			'tagCount' => array(
+				'type' => 'number',
+				'default' => 5
+			),
+			'tagNormalColor' => array(
+				'type' => 'string',
+				'default' => '#1E1E1E'
+			),
+			'tagHoverColor' => array(
+				'type' => 'string',
+				'default' => '#F7F7F7'
+			),
+			'gap' => array(
+				'type' => 'number',
+				'default' => 15
+			),
+			'tagFontWeight' => array(
+				'type' => 'string',
+				'default' => '400'
+			),
+			'linkBgColor' => array(
+				'type' => 'string',
+				'default' => '#FFFFFF'
+			),
+			'linkBgHoverColor' => array(
+				'type' => 'string',
+				'default' => '#f58840'
+			),
+			'borderColor' => array(
+				'type' => 'string',
+				'default' => '#EEEEEE'
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'elegance',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
 	'recent-posts' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 2,

@@ -106,6 +106,7 @@ export default function Edit({ attributes, setAttributes }) {
 					initialOpen={false}
 				>
 					<PanelColorSettings
+						enableAlpha={true}
 						colorSettings={[
 							{
 								value: attributes.bgColor,
@@ -134,6 +135,7 @@ export default function Edit({ attributes, setAttributes }) {
 						initialOpen={false}
 					>
 						<PanelColorSettings
+							enableAlpha={true}
 							colorSettings={[
 								{
 									value: attributes.siteTitleColor,
@@ -156,6 +158,7 @@ export default function Edit({ attributes, setAttributes }) {
 					initialOpen={false}
 				>
 					<PanelColorSettings
+						enableAlpha={true}
 						colorSettings={[
 							{
 								value: attributes.linkColor,
@@ -177,6 +180,7 @@ export default function Edit({ attributes, setAttributes }) {
 					initialOpen={false}
 				>
 					<PanelColorSettings
+						enableAlpha={true}
 						colorSettings={[
 							{
 								value: attributes.linkActiveColor,

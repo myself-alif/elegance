@@ -76,6 +76,7 @@ export default function Edit({ attributes, setAttributes }) {
 						value={parseInt(attributes.headingSize)}
 					/>
 					<PanelColorSettings
+						enableAlpha={true}
 						__experimentalIsRenderedInSidebar
 						title={__("Color", metadata.textdomain)}
 						colorSettings={[
@@ -117,6 +118,7 @@ export default function Edit({ attributes, setAttributes }) {
 						value={parseInt(attributes.categoryCount)}
 					/>
 					<PanelColorSettings
+						enableAlpha={true}
 						__experimentalIsRenderedInSidebar
 						title={__("Colors", metadata.textdomain)}
 						colorSettings={[
@@ -140,7 +142,7 @@ export default function Edit({ attributes, setAttributes }) {
 					<Divider />
 					<SelectControl
 						label={__("Font weight", metadata.textdomain)}
-						value={attributes.fontSize}
+						value={attributes.fontWeight}
 						onChange={(value) => setAttributes({ fontWeight: value })}
 						options={[
 							{ label: "Light", value: "300" },

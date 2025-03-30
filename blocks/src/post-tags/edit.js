@@ -25,6 +25,7 @@ import {
 	__experimentalDivider as Divider,
 	__experimentalNumberControl as NumberControl,
 	RangeControl,
+	SelectControl,
 } from "@wordpress/components";
 import ServerSideRender from "@wordpress/server-side-render";
 
@@ -47,117 +48,110 @@ import "./editor.scss";
 export default function Edit({ attributes, setAttributes }) {
 	return (
 		<div {...useBlockProps()}>
-			<ServerSideRender block="elegant/recent-posts" attributes={attributes} />
+			<ServerSideRender block="elegant/post-tags" attributes={attributes} />
 			<InspectorControls>
 				<PanelBody
 					title={__("Heading", metadata.textdomain)}
 					initialOpen={false}
 				>
 					<RichText
+						placeholder={__("Type heading here", metadata.textdomain)}
 						value={attributes.heading}
-						onChange={(content) => setAttributes({ heading: content })}
-						placeholder={__("Type heading here...", metadata.textdomain)}
+						onChange={(value) => setAttributes({ heading: value })}
 					/>
-					<Divider />
-					<FontSizePicker
-						value={attributes.headingFontSize}
-						onChange={(size) => {
-							setAttributes({ headingFontSize: size });
-						}}
-					/>
-					<Divider />
 					<PanelColorSettings
 						enableAlpha={true}
-						__experimentalIsRenderedInSidebar
-						title={__("Color", metadata.textdomain)}
 						colorSettings={[
 							{
 								value: attributes.headingColor,
-								onChange: (color) => setAttributes({ headingColor: color }),
-								label: __("Color", metadata.textdomain),
+								onChange: (colorValue) =>
+									setAttributes({ headingColor: colorValue }),
+								label: __("Color"),
 							},
 						]}
 					/>
+					<FontSizePicker
+						value={attributes.headingSize}
+						onChange={(value) => setAttributes({ headingSize: value })}
+					/>
 					<Divider />
 					<AlignmentToolbar
-						allowedControls={["left", "center", "right"]}
 						value={attributes.headingAlignment}
 						onChange={(value) => setAttributes({ headingAlignment: value })}
 					/>
 					<RangeControl
-						__nextHasNoMarginBottom
-						__next40pxDefaultSize
-						label={__("Gap", metadata.textdomain)}
-						value={attributes.gap}
-						onChange={(value) => setAttributes({ gap: value })}
+						label={__("gap", metadata.textdomain)}
 						min={0}
 						max={100}
+						value={attributes.gap}
+						onChange={(value) => setAttributes({ gap: value })}
 					/>
 				</PanelBody>
-				<PanelBody
-					title={__("Posts settings", metadata.textdomain)}
-					initialOpen={false}
-				>
+				<PanelBody title={__("Tags", metadata.textdomain)} initialOpen={false}>
+					<Divider />
 					<NumberControl
-						label={__("Post count", metadata.textdomain)}
-						__next40pxDefaultSize
-						isShiftStepEnabled={true}
-						onChange={(value) => setAttributes({ postCount: parseInt(value) })}
-						shiftStep={1}
-						value={parseInt(attributes.postCount)}
-						min={1}
-						max={100}
+						value={parseInt(attributes.tagCount)}
+						onChange={(value) => setAttributes({ tagCount: parseInt(value) })}
 					/>
-				</PanelBody>
-				<PanelBody
-					title={__("Title colors", metadata.textdomain)}
-					initialOpen={false}
-				>
 					<PanelColorSettings
 						enableAlpha={true}
+						title={__("Link colors", metadata.textdomain)}
 						colorSettings={[
 							{
-								value: attributes.linkColor,
+								value: attributes.tagNormalColor,
 								onChange: (colorValue) =>
-									setAttributes({ linkColor: colorValue }),
+									setAttributes({ tagNormalColor: colorValue }),
 								label: __("Normal color"),
 							},
 							{
-								value: attributes.linkColorHover,
+								value: attributes.tagHoverColor,
 								onChange: (colorValue) =>
-									setAttributes({ linkColorHover: colorValue }),
+									setAttributes({ tagHoverColor: colorValue }),
 								label: __("Hover color"),
 							},
 						]}
 					/>
-					<FontSizePicker
-						value={attributes.titleFontSize}
-						onChange={(size) => {
-							setAttributes({ titleFontSize: size });
-						}}
-					/>
-				</PanelBody>
-				<PanelBody
-					title={__("Time color", metadata.textdomain)}
-					initialOpen={false}
-				>
 					<PanelColorSettings
 						enableAlpha={true}
+						title={__("Link background colors", metadata.textdomain)}
 						colorSettings={[
 							{
-								value: attributes.dateColor,
+								value: attributes.linkBgColor,
 								onChange: (colorValue) =>
-									setAttributes({ dateColor: colorValue }),
+									setAttributes({ linkBgColor: colorValue }),
 								label: __("Normal color"),
+							},
+							{
+								value: attributes.linkBgHoverColor,
+								onChange: (colorValue) =>
+									setAttributes({ linkBgHoverColor: colorValue }),
+								label: __("Hover color"),
 							},
 						]}
 					/>
-					<Divider />
-					<FontSizePicker
-						value={attributes.timeFontSize}
-						onChange={(size) => {
-							setAttributes({ timeFontSize: size });
-						}}
+					<SelectControl
+						label={__("Font weight", metadata.textdomain)}
+						value={attributes.tagFontWeight}
+						onChange={(value) => setAttributes({ tagFontWeight: value })}
+						options={[
+							{ label: "Light", value: "300" },
+							{ label: "Regular", value: "400" },
+							{ label: "Bold", value: "700" },
+						]}
+						__next40pxDefaultSize
+						__nextHasNoMarginBottom
+					/>
+					<PanelColorSettings
+						enableAlpha={true}
+						title={__("Border color", metadata.textdomain)}
+						colorSettings={[
+							{
+								value: attributes.borderColor,
+								onChange: (colorValue) =>
+									setAttributes({ borderColor: colorValue }),
+								label: __("Color"),
+							},
+						]}
 					/>
 				</PanelBody>
 			</InspectorControls>

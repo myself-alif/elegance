@@ -33,6 +33,7 @@ function elegant_theme_init()
 	register_block_type(__DIR__ . '/build/social-links');
 	register_block_type(__DIR__ . '/build/recent-posts');
 	register_block_type(__DIR__ . '/build/post-categories');
+	register_block_type(__DIR__ . '/build/post-tags');
 }
 add_action('init', 'elegant_theme_init');
 
