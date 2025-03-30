@@ -34,6 +34,7 @@ function elegant_theme_init()
 	register_block_type(__DIR__ . '/build/recent-posts');
 	register_block_type(__DIR__ . '/build/post-categories');
 	register_block_type(__DIR__ . '/build/post-tags');
+	register_block_type(__DIR__ . '/build/search');
 }
 add_action('init', 'elegant_theme_init');
 
@@ -49,3 +50,7 @@ function elegant_theme_register_block_category($categories)
 
 	return $categories;
 }
+
+add_action('enqueue_block_assets', function (): void {
+	wp_enqueue_style('dashicons');
+});

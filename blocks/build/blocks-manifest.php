@@ -336,6 +336,53 @@ return array(
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
 	),
+	'search' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 2,
+		'name' => 'elegant/search',
+		'version' => '1.0',
+		'title' => 'Search',
+		'category' => 'elegant-blocks',
+		'icon' => 'search',
+		'description' => 'Shows search results',
+		'example' => array(
+			
+		),
+		'attributes' => array(
+			'placeholderText' => array(
+				'type' => 'string',
+				'default' => 'Search'
+			),
+			'textColor' => array(
+				'type' => 'string',
+				'default' => '#7a7a7a'
+			),
+			'placeHolderColor' => array(
+				'type' => 'string',
+				'default' => '#7A7A7A'
+			),
+			'iconColorNormal' => array(
+				'type' => 'string',
+				'default' => '#7A7A7A'
+			),
+			'iconColorHover' => array(
+				'type' => 'string',
+				'default' => '#F48840'
+			),
+			'borderColor' => array(
+				'type' => 'string',
+				'default' => '#EEEEEE'
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'elegance',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
 	'social-links' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 2,
