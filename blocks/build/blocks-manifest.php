@@ -198,6 +198,166 @@ return array(
 		'style' => 'file:./style-index.css',
 		'render' => 'file:./render.php'
 	),
+	'post-gallery' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 2,
+		'name' => 'elegant/post-gallery',
+		'version' => '1.0',
+		'title' => 'Post gallery',
+		'category' => 'elegant-blocks',
+		'icon' => 'slides',
+		'description' => 'Shows posts in a horizontal gallery',
+		'example' => array(
+			
+		),
+		'attributes' => array(
+			'postCount' => array(
+				'type' => 'number',
+				'default' => 5
+			),
+			'order' => array(
+				'type' => 'string',
+				'default' => 'DESC'
+			),
+			'orderby' => array(
+				'type' => 'string',
+				'default' => 'title'
+			),
+			'gap' => array(
+				'type' => 'number',
+				'default' => 10
+			),
+			'loop' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'autoplay' => array(
+				'type' => 'boolean',
+				'default' => true
+			),
+			'interval' => array(
+				'type' => 'number',
+				'default' => 2500
+			),
+			'categoryFontSize' => array(
+				'type' => 'number',
+				'default' => 16
+			),
+			'titleFontSize' => array(
+				'type' => 'number',
+				'default' => 25
+			),
+			'authorFontSize' => array(
+				'type' => 'number',
+				'default' => 12
+			),
+			'timeFontSize' => array(
+				'type' => 'number',
+				'default' => 12
+			),
+			'commentFontSize' => array(
+				'type' => 'number',
+				'default' => 12
+			),
+			'categoryFontWeight' => array(
+				'type' => 'number',
+				'default' => 700
+			),
+			'titleFontWeight' => array(
+				'type' => 'number',
+				'default' => 700
+			),
+			'authorFontWeight' => array(
+				'type' => 'number',
+				'default' => 700
+			),
+			'commentFontWeight' => array(
+				'type' => 'number',
+				'default' => 700
+			),
+			'timeFontWeight' => array(
+				'type' => 'number',
+				'default' => 700
+			),
+			'categoryColor' => array(
+				'type' => 'string',
+				'default' => '#F48840'
+			),
+			'titleColor' => array(
+				'type' => 'string',
+				'default' => '#FFFFFF'
+			),
+			'authorColor' => array(
+				'type' => 'string',
+				'default' => '#FFFFFF'
+			),
+			'timeColor' => array(
+				'type' => 'string',
+				'default' => '#FFFFFF'
+			),
+			'commentColor' => array(
+				'type' => 'string',
+				'default' => '#FFFFFF'
+			),
+			'arrowColor' => array(
+				'type' => 'string',
+				'default' => '#FFFFFF'
+			),
+			'buttonBgColor' => array(
+				'type' => 'string',
+				'default' => '#fafafa4d'
+			),
+			'categoryColorHover' => array(
+				'type' => 'string',
+				'default' => '#FFFFFF'
+			),
+			'titleColorHover' => array(
+				'type' => 'string',
+				'default' => '#F48840'
+			),
+			'authorColorHover' => array(
+				'type' => 'string',
+				'default' => '#F48840'
+			),
+			'timeColorHover' => array(
+				'type' => 'string',
+				'default' => '#F48840'
+			),
+			'commentColorHover' => array(
+				'type' => 'string',
+				'default' => '#F48840'
+			),
+			'buttonBgColorHover' => array(
+				'type' => 'string',
+				'default' => '#F48840'
+			),
+			'arrowColorHover' => array(
+				'type' => 'string',
+				'default' => '#FFFFFF'
+			),
+			'slidesInDesktop' => array(
+				'type' => 'number',
+				'default' => 3
+			),
+			'slidesInTab' => array(
+				'type' => 'number',
+				'default' => 2
+			),
+			'slidesInMobile' => array(
+				'type' => 'number',
+				'default' => 1
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'elegance',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'script' => 'file:./script.js',
+		'render' => 'file:./render.php'
+	),
 	'post-tags' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 2,

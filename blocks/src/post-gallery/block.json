@@ -1,0 +1,158 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "elegant/post-gallery",
+	"version": "1.0",
+	"title": "Post gallery",
+	"category": "elegant-blocks",
+	"icon": "slides",
+	"description": "Shows posts in a horizontal gallery",
+	"example": {},
+	"attributes": {
+		"postCount": {
+			"type": "number",
+			"default": 5
+		},
+		"order": {
+			"type": "string",
+			"default": "DESC"
+		},
+		"orderby": {
+			"type": "string",
+			"default": "title"
+		},
+		"gap": {
+			"type": "number",
+			"default": 10
+		},
+		"loop": {
+			"type": "boolean",
+			"default": true
+		},
+		"autoplay": {
+			"type": "boolean",
+			"default": true
+		},
+		"interval": {
+			"type": "number",
+			"default": 2500
+		},
+		"categoryFontSize": {
+			"type": "number",
+			"default": 16
+		},
+		"titleFontSize": {
+			"type": "number",
+			"default": 25
+		},
+		"authorFontSize": {
+			"type": "number",
+			"default": 12
+		},
+		"timeFontSize": {
+			"type": "number",
+			"default": 12
+		},
+		"commentFontSize": {
+			"type": "number",
+			"default": 12
+		},
+		"categoryFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"titleFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"authorFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"commentFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"timeFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"categoryColor": {
+			"type": "string",
+			"default": "#F48840"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#FFFFFF"
+		},
+		"authorColor": {
+			"type": "string",
+			"default": "#FFFFFF"
+		},
+		"timeColor": {
+			"type": "string",
+			"default": "#FFFFFF"
+		},
+		"commentColor": {
+			"type": "string",
+			"default": "#FFFFFF"
+		},
+		"arrowColor": {
+			"type": "string",
+			"default": "#FFFFFF"
+		},
+		"buttonBgColor": {
+			"type": "string",
+			"default": "#fafafa4d"
+		},
+		"categoryColorHover": {
+			"type": "string",
+			"default": "#FFFFFF"
+		},
+		"titleColorHover": {
+			"type": "string",
+			"default": "#F48840"
+		},
+		"authorColorHover": {
+			"type": "string",
+			"default": "#F48840"
+		},
+		"timeColorHover": {
+			"type": "string",
+			"default": "#F48840"
+		},
+		"commentColorHover": {
+			"type": "string",
+			"default": "#F48840"
+		},
+		"buttonBgColorHover": {
+			"type": "string",
+			"default": "#F48840"
+		},
+		"arrowColorHover": {
+			"type": "string",
+			"default": "#FFFFFF"
+		},
+		"slidesInDesktop": {
+			"type": "number",
+			"default": 3
+		},
+		"slidesInTab": {
+			"type": "number",
+			"default": 2
+		},
+		"slidesInMobile": {
+			"type": "number",
+			"default": 1
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "elegance",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"script": "file:./script.js",
+	"render": "file:./render.php"
+}

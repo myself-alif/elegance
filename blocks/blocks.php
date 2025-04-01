@@ -35,6 +35,7 @@ function elegant_theme_init()
 	register_block_type(__DIR__ . '/build/post-categories');
 	register_block_type(__DIR__ . '/build/post-tags');
 	register_block_type(__DIR__ . '/build/search');
+	register_block_type(__DIR__ . '/build/post-gallery');
 }
 add_action('init', 'elegant_theme_init');
 

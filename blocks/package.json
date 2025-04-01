@@ -18,6 +18,7 @@
 		"@wordpress/scripts": "^30.13.0"
 	},
 	"dependencies": {
+		"owl.carousel": "^2.3.4",
 		"react-color": "^2.19.3"
 	}
 }

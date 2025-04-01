@@ -1,0 +1,30 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-elegant-post-gallery {
+	button {
+		span {
+			transition: all 0.3s ease;
+		}
+	}
+	.owl-item {
+		a {
+			transition: color 0.3s ease;
+			h4 {
+				transition: color 0.3s ease;
+			}
+		}
+		img {
+			filter: brightness(60%);
+			transition: filter 0.3s ease;
+		}
+		&:hover {
+			img {
+				filter: brightness(100%);
+			}
+		}
+	}
+}

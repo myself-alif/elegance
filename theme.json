@@ -39,7 +39,6 @@
       "fontWeight": true,
       "textDecoration": true,
       "textTransform": true,
-      "fontWeight": ["300", "400", "700", "900"],
       "fontSizes": [
         {
           "size": 12,
