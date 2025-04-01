@@ -1,0 +1,141 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "elegant/post-grid",
+	"version": "1.0",
+	"title": "Post grid",
+	"category": "elegant-blocks",
+	"icon": "layout",
+	"description": "Shows blog posts",
+	"example": {},
+	"attributes": {
+		"categoryFontSize": {
+			"type": "number",
+			"default": 16
+		},
+		"titleFontSize": {
+			"type": "number",
+			"default": 20
+		},
+		"authorFontSize": {
+			"type": "number",
+			"default": 12
+		},
+		"timeFontSize": {
+			"type": "number",
+			"default": 12
+		},
+		"commentFontSize": {
+			"type": "number",
+			"default": 12
+		},
+		"excerptFontSize": {
+			"type": "number",
+			"default": 16
+		},
+		"paginationFontSize": {
+			"type": "number",
+			"default": 16
+		},
+		"categoryFontWeight": {
+			"type": "number",
+			"default": 400
+		},
+		"titleFontWeight": {
+			"type": "number",
+			"default": 700
+		},
+		"authorFontWeight": {
+			"type": "number",
+			"default": 400
+		},
+		"timeFontWeight": {
+			"type": "number",
+			"default": 400
+		},
+		"commentFontWeight": {
+			"type": "number",
+			"default": 400
+		},
+		"excerptFontWeight": {
+			"type": "number",
+			"default": 400
+		},
+		"paginationFontWeight": {
+			"type": "number",
+			"default": 400
+		},
+		"bgColor": {
+			"type": "string",
+			"default": "#FFFFFF"
+		},
+		"paginationBgColor": {
+			"type": "string",
+			"default": "#FFFFFF"
+		},
+		"categoryColor": {
+			"type": "string",
+			"default": "#F48840"
+		},
+		"titleColor": {
+			"type": "string",
+			"default": "#1E1E1E"
+		},
+		"authorColor": {
+			"type": "string",
+			"default": "#AAAAAA"
+		},
+		"timeColor": {
+			"type": "string",
+			"default": "#AAAAAA"
+		},
+		"commentColor": {
+			"type": "string",
+			"default": "#AAAAAA"
+		},
+		"excerptColor": {
+			"type": "string",
+			"default": "#AAAAAA"
+		},
+		"paginationColor": {
+			"type": "string",
+			"default": "#AAAAAA"
+		},
+		"categoryColorHover": {
+			"type": "string",
+			"default": "#1E1E1E"
+		},
+		"titleColorHover": {
+			"type": "string",
+			"default": "#F48840"
+		},
+		"authorColorHover": {
+			"type": "string",
+			"default": "#F48840"
+		},
+		"timeColorHover": {
+			"type": "string",
+			"default": "#F48840"
+		},
+		"commentColorHover": {
+			"type": "string",
+			"default": "#F48840"
+		},
+		"paginationColorActive": {
+			"type": "string",
+			"default": "#FFFFFF"
+		},
+		"paginationBgColorActive": {
+			"type": "string",
+			"default": "#F48840"
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "elegance",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -390,10 +390,6 @@ header .site-logo {
 
 /* Blog Posts */
 
-.blog-posts {
-  margin-top: 100px;
-}
-
 .blog-posts .blog-post {
   margin-bottom: 30px;
 }
@@ -404,7 +400,7 @@ header .site-logo {
 }
 
 .blog-posts .down-content {
-  padding: 40px;
+  padding: 20px;
   border-right: 1px solid #eee;
   border-left: 1px solid #eee;
   border-bottom: 1px solid #eee;
@@ -467,10 +463,9 @@ header .site-logo {
 }
 
 .blog-posts .down-content p {
-  padding: 25px 0px;
-  margin: 25px 0px;
+  padding-top: 25px;
+  margin-top: 25px;
   border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
 }
 
 .blog-posts .down-content ul.post-share {
@@ -534,12 +529,6 @@ ul.page-numbers li a {
   border: 1px solid #eee;
   font-weight: 500;
   transition: all 0.3s;
-}
-
-ul.page-numbers li.active a {
-  background-color: #f48840;
-  border-color: #f48840;
-  color: #fff;
 }
 
 ul.page-numbers li a:hover {

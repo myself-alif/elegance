@@ -358,6 +358,149 @@ return array(
 		'script' => 'file:./script.js',
 		'render' => 'file:./render.php'
 	),
+	'post-grid' => array(
+		'$schema' => 'https://schemas.wp.org/trunk/block.json',
+		'apiVersion' => 2,
+		'name' => 'elegant/post-grid',
+		'version' => '1.0',
+		'title' => 'Post grid',
+		'category' => 'elegant-blocks',
+		'icon' => 'layout',
+		'description' => 'Shows blog posts',
+		'example' => array(
+			
+		),
+		'attributes' => array(
+			'categoryFontSize' => array(
+				'type' => 'number',
+				'default' => 16
+			),
+			'titleFontSize' => array(
+				'type' => 'number',
+				'default' => 20
+			),
+			'authorFontSize' => array(
+				'type' => 'number',
+				'default' => 12
+			),
+			'timeFontSize' => array(
+				'type' => 'number',
+				'default' => 12
+			),
+			'commentFontSize' => array(
+				'type' => 'number',
+				'default' => 12
+			),
+			'excerptFontSize' => array(
+				'type' => 'number',
+				'default' => 16
+			),
+			'paginationFontSize' => array(
+				'type' => 'number',
+				'default' => 16
+			),
+			'categoryFontWeight' => array(
+				'type' => 'number',
+				'default' => 400
+			),
+			'titleFontWeight' => array(
+				'type' => 'number',
+				'default' => 700
+			),
+			'authorFontWeight' => array(
+				'type' => 'number',
+				'default' => 400
+			),
+			'timeFontWeight' => array(
+				'type' => 'number',
+				'default' => 400
+			),
+			'commentFontWeight' => array(
+				'type' => 'number',
+				'default' => 400
+			),
+			'excerptFontWeight' => array(
+				'type' => 'number',
+				'default' => 400
+			),
+			'paginationFontWeight' => array(
+				'type' => 'number',
+				'default' => 400
+			),
+			'bgColor' => array(
+				'type' => 'string',
+				'default' => '#FFFFFF'
+			),
+			'paginationBgColor' => array(
+				'type' => 'string',
+				'default' => '#FFFFFF'
+			),
+			'categoryColor' => array(
+				'type' => 'string',
+				'default' => '#F48840'
+			),
+			'titleColor' => array(
+				'type' => 'string',
+				'default' => '#1E1E1E'
+			),
+			'authorColor' => array(
+				'type' => 'string',
+				'default' => '#AAAAAA'
+			),
+			'timeColor' => array(
+				'type' => 'string',
+				'default' => '#AAAAAA'
+			),
+			'commentColor' => array(
+				'type' => 'string',
+				'default' => '#AAAAAA'
+			),
+			'excerptColor' => array(
+				'type' => 'string',
+				'default' => '#AAAAAA'
+			),
+			'paginationColor' => array(
+				'type' => 'string',
+				'default' => '#AAAAAA'
+			),
+			'categoryColorHover' => array(
+				'type' => 'string',
+				'default' => '#1E1E1E'
+			),
+			'titleColorHover' => array(
+				'type' => 'string',
+				'default' => '#F48840'
+			),
+			'authorColorHover' => array(
+				'type' => 'string',
+				'default' => '#F48840'
+			),
+			'timeColorHover' => array(
+				'type' => 'string',
+				'default' => '#F48840'
+			),
+			'commentColorHover' => array(
+				'type' => 'string',
+				'default' => '#F48840'
+			),
+			'paginationColorActive' => array(
+				'type' => 'string',
+				'default' => '#FFFFFF'
+			),
+			'paginationBgColorActive' => array(
+				'type' => 'string',
+				'default' => '#F48840'
+			)
+		),
+		'supports' => array(
+			'html' => false
+		),
+		'textdomain' => 'elegance',
+		'editorScript' => 'file:./index.js',
+		'editorStyle' => 'file:./index.css',
+		'style' => 'file:./style-index.css',
+		'render' => 'file:./render.php'
+	),
 	'post-tags' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 2,

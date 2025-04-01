@@ -14,16 +14,18 @@ import { __ } from "@wordpress/i18n";
 import metadata from "./block.json";
 import {
 	useBlockProps,
+	RichText,
 	InspectorControls,
 	PanelColorSettings,
+	AlignmentToolbar,
 	FontSizePicker,
 } from "@wordpress/block-editor";
 import {
 	PanelBody,
 	__experimentalDivider as Divider,
 	__experimentalNumberControl as NumberControl,
+	RangeControl,
 	SelectControl,
-	CheckboxControl,
 } from "@wordpress/components";
 import ServerSideRender from "@wordpress/server-side-render";
 
@@ -46,114 +48,24 @@ import "./editor.scss";
 export default function Edit({ attributes, setAttributes }) {
 	return (
 		<div {...useBlockProps()}>
-			<ServerSideRender block="elegant/post-gallery" attributes={attributes} />
+			<ServerSideRender block="elegant/post-grid" attributes={attributes} />
 			<InspectorControls>
 				<PanelBody
-					title={__("Content", metadata.textdomain)}
+					title={__("Background color", metadata.textdomain)}
 					initialOpen={false}
 				>
-					<NumberControl
-						min={1}
-						max={100}
-						label={__("Post count", metadata.textdomain)}
-						value={parseInt(attributes.postCount)}
-						onChange={(value) => setAttributes({ postCount: parseInt(value) })}
-					/>
-					{attributes.orderby !== "rand" && (
-						<SelectControl
-							label={__("Order", metadata.textdomain)}
-							value={attributes.order}
-							onChange={(value) => setAttributes({ order: value })}
-							options={[
-								{ label: __("ASC", metadata.textdomain), value: "ASC" },
-								{ label: __("DESC", metadata.textdomain), value: "DESC" },
-							]}
-						/>
-					)}
-					<SelectControl
-						label={__("Orderby", metadata.textdomain)}
-						value={attributes.orderby}
-						onChange={(value) => setAttributes({ orderby: value })}
-						options={[
-							{ label: __("Date", metadata.textdomain), value: "date" },
-							{ label: __("Title", metadata.textdomain), value: "title" },
+					<PanelColorSettings
+						enableAlpha={true}
+						title={__("Colors", metadata.textdomain)}
+						colorSettings={[
 							{
-								label: __("Last modified", metadata.textdomain),
-								value: "modified",
-							},
-							{
-								label: __("Name", metadata.textdomain),
-								value: "name",
-							},
-							{
-								label: __("Random", metadata.textdomain),
-								value: "rand",
-							},
-							{
-								label: __("Comment count", metadata.textdomain),
-								value: "comment_count",
+								value: attributes.bgColor,
+								onChange: (colorValue) =>
+									setAttributes({ bgColor: colorValue }),
+								label: __("Color", metadata.textdomain),
 							},
 						]}
 					/>
-				</PanelBody>
-				<PanelBody
-					title={__("Settings", metadata.textdomain)}
-					initialOpen={false}
-				>
-					<NumberControl
-						min={1}
-						max={100}
-						label={__("Number of slides in desktop", metadata.textdomain)}
-						value={parseInt(attributes.slidesInDesktop)}
-						onChange={(value) =>
-							setAttributes({ slidesInDesktop: parseInt(value) })
-						}
-					/>
-					<NumberControl
-						min={1}
-						max={100}
-						label={__("Number of slides in tab", metadata.textdomain)}
-						value={parseInt(attributes.slidesInTab)}
-						onChange={(value) =>
-							setAttributes({ slidesInTab: parseInt(value) })
-						}
-					/>
-					<NumberControl
-						min={1}
-						max={100}
-						label={__("Number of slides in mobile", metadata.textdomain)}
-						value={parseInt(attributes.slidesInMobile)}
-						onChange={(value) =>
-							setAttributes({ slidesInMobile: parseInt(value) })
-						}
-					/>
-					<NumberControl
-						min={1}
-						max={100}
-						label={__("Gap", metadata.textdomain)}
-						value={parseInt(attributes.gap)}
-						onChange={(value) => setAttributes({ gap: parseInt(value) })}
-					/>
-					<CheckboxControl
-						label={__("Loop", metadata.textdomain)}
-						checked={attributes.loop}
-						onChange={(value) => setAttributes({ loop: value })}
-					/>
-					<CheckboxControl
-						label={__("Autoplay", metadata.textdomain)}
-						checked={attributes.autoplay}
-						onChange={(value) => setAttributes({ autoplay: value })}
-					/>
-					{attributes.autoplay && (
-						<NumberControl
-							min={500}
-							max={10000}
-							step={100}
-							label={__("Interval", metadata.textdomain)}
-							value={parseInt(attributes.interval)}
-							onChange={(value) => setAttributes({ interval: parseInt(value) })}
-						/>
-					)}
 				</PanelBody>
 				<PanelBody
 					title={__("Category", metadata.textdomain)}
@@ -310,7 +222,7 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 				<PanelBody
-					title={__("Comments", metadata.textdomain)}
+					title={__("Comment", metadata.textdomain)}
 					initialOpen={false}
 				>
 					<FontSizePicker
@@ -350,42 +262,93 @@ export default function Edit({ attributes, setAttributes }) {
 					/>
 				</PanelBody>
 				<PanelBody
-					title={__("Buttons", metadata.textdomain)}
+					title={__("Excerpt", metadata.textdomain)}
 					initialOpen={false}
 				>
+					<FontSizePicker
+						value={attributes.excerptFontSize}
+						onChange={(value) => setAttributes({ excerptFontSize: value })}
+					/>
+					<Divider />
+					<SelectControl
+						label={__("Font weight", metadata.textdomain)}
+						value={parseInt(attributes.excerptFontWeight)}
+						onChange={(value) =>
+							setAttributes({ excerptFontWeight: parseInt(value) })
+						}
+						options={[
+							{ label: "Light", value: "300" },
+							{ label: "Regular", value: "400" },
+							{ label: "Bold", value: "700" },
+						]}
+					/>
 					<PanelColorSettings
 						enableAlpha={true}
-						title={__("Background colors", metadata.textdomain)}
+						title={__("Colors", metadata.textdomain)}
 						colorSettings={[
 							{
-								value: attributes.buttonBgColor,
+								value: attributes.excerptColor,
 								onChange: (colorValue) =>
-									setAttributes({ buttonBgColor: colorValue }),
-								label: __("Normal"),
+									setAttributes({ excerptColor: colorValue }),
+								label: __("color", metadata.textdomain),
+							},
+						]}
+					/>
+				</PanelBody>
+				<PanelBody
+					title={__("Pagination", metadata.textdomain)}
+					initialOpen={false}
+				>
+					<FontSizePicker
+						value={attributes.paginationFontSize}
+						onChange={(value) => setAttributes({ paginationFontSize: value })}
+					/>
+					<Divider />
+					<SelectControl
+						label={__("Font weight", metadata.textdomain)}
+						value={parseInt(attributes.paginationFontWeight)}
+						onChange={(value) =>
+							setAttributes({ paginationFontWeight: parseInt(value) })
+						}
+						options={[
+							{ label: "Light", value: "300" },
+							{ label: "Regular", value: "400" },
+							{ label: "Bold", value: "700" },
+						]}
+					/>
+					<PanelColorSettings
+						enableAlpha={true}
+						title={__("Colors", metadata.textdomain)}
+						colorSettings={[
+							{
+								value: attributes.paginationColor,
+								onChange: (colorValue) =>
+									setAttributes({ paginationColor: colorValue }),
+								label: __("Normal", metadata.textdomain),
 							},
 							{
-								value: attributes.buttonBgColorHover,
+								value: attributes.paginationColorActive,
 								onChange: (colorValue) =>
-									setAttributes({ buttonBgColorHover: colorValue }),
-								label: __("Hover"),
+									setAttributes({ paginationColorActive: colorValue }),
+								label: __("Active", metadata.textdomain),
 							},
 						]}
 					/>
 					<PanelColorSettings
 						enableAlpha={true}
-						title={__("Arrow colors", metadata.textdomain)}
+						title={__("Background colors", metadata.textdomain)}
 						colorSettings={[
 							{
-								value: attributes.arrowColor,
+								value: attributes.paginationBgColor,
 								onChange: (colorValue) =>
-									setAttributes({ arrowColor: colorValue }),
-								label: __("Normal"),
+									setAttributes({ paginationBgColor: colorValue }),
+								label: __("Normal", metadata.textdomain),
 							},
 							{
-								value: attributes.arrowColorHover,
+								value: attributes.paginationBgColorActive,
 								onChange: (colorValue) =>
-									setAttributes({ arrowColorHover: colorValue }),
-								label: __("Hover"),
+									setAttributes({ paginationBgColorActive: colorValue }),
+								label: __("Active", metadata.textdomain),
 							},
 						]}
 					/>
