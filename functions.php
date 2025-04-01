@@ -97,36 +97,6 @@ class Custom_Nav_Walker_For_Editor_Panel extends Walker_Nav_Menu
 	}
 }
 
-function custom_pagination()
-{
-	global $wp_query;
-
-	$current_page = max(1, get_query_var('paged'));
-	$total_pages = $wp_query->max_num_pages;
-
-	if ($total_pages <= 1) return;
-
-	echo '<ul class="page-numbers">';
-
-	if ($current_page > 1) {
-		echo '<li><a href="' . get_pagenum_link($current_page - 1) . '"><i class="fa fa-angle-double-left"></i></a></li>';
-	}
-
-	for ($i = 1; $i <= $total_pages; $i++) {
-		if ($i == $current_page) {
-			echo '<li class="active"><a href="#">' . $i . '</a></li>';
-		} else {
-			echo '<li><a href="' . get_pagenum_link($i) . '">' . $i . '</a></li>';
-		}
-	}
-
-	if ($current_page < $total_pages) {
-		echo '<li><a href="' . get_pagenum_link($current_page + 1) . '"><i class="fa fa-angle-double-right"></i></a></li>';
-	}
-
-	echo '</ul>';
-}
-
 
 function elegance_styles()
 {
