@@ -4,3 +4,20 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
+@media (max-width: 600px) {
+	.wp-block-elegant-footer {
+		.social-icons {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			flex-wrap: wrap;
+			li {
+				margin-bottom: 10px;
+				display: block;
+				&::after {
+					display: none;
+				}
+			}
+		}
+	}
+}
