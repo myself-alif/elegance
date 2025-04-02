@@ -1,3 +1,14 @@
+<h1>Installation</h1>
+
+<ul>
+<li>Download zip</li>
+<li>Extract it</li>
+<li>Open the extracted folder and copy "elegance-main" folder and pasted it to the theme folder</li>
+<li>After that, Make sure to rename <strong>"elegance-main"</strong> to <strong>elegance</strong></li>
+<li>Activate the theme from the dashboard</li>
+</ul>
+
+
 === Elegance ===
 Contributors: Al Mahmud Alif
 Tested up to: 6.4
