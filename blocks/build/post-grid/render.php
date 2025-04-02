@@ -47,7 +47,7 @@
         </style>
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div>
                     <div class="all-blog-posts">
                         <div class="row">
                             <?php
